@@ -1,18 +1,12 @@
-package hw03_prime_numbers;
+package main.java.hw03_prime_numbers;
 
 public class Exponentiation {
 
     static long powViaMultiply(int num, int degree) {
-        long startTime = System.nanoTime();
-        if (degree == 0) {
-            return 1;
+        long result = 1;
+        for (int i = 1; i <= degree; i++) {
+            result *= num;
         }
-
-        int numInFirstDegree = num;
-        for (int i = 2; i <= degree; i++) {
-            num *= numInFirstDegree;
-        }
-        System.out.println(startTime - System.nanoTime());
-        return num;
+        return result;
     }
 }
