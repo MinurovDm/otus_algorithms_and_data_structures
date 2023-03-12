@@ -1,5 +1,7 @@
 package hw7;
 
+import java.util.Arrays;
+
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
         int n = arr.length;
@@ -14,5 +16,11 @@ public class SelectionSort {
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 25, 12, 22, 11};
+        selectionSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
